@@ -1,48 +1,73 @@
-"use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { TypeAnimation } from 'react-type-animation'
+import { FaGithub, FaLinkedin, FaTwitter, FaDiscord } from 'react-icons/fa'
+import { SiLeetcode } from 'react-icons/si'
+import HeroH1 from './HeroH1'
 
 const Hero = () => {
   return (
-    <section className="text-gray-800 dark:text-white">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
-            <TypeAnimation
-              sequence={[
-                "Hi, I'm Monish Agrawal",
-                1000,
-                "I build things for the web",
-                1000,
-                "I learn new things everyday",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </h1>
-          <p className="mb-8 leading-relaxed">
-          I&apos;m a versatile software developer with a strong foundation in creating efficient, user-focused applications. Currently, as a freelancer, I&apos;m building and delivering scalable, user-friendly software solutions.
-          </p>
-          <div className="flex justify-center">
-            <Link href="/projects" className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
-              View My Work
-            </Link>
-            <Link href="/contact" className="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg dark:text-gray-800">
-              Contact Me
-            </Link>
+    <section className="relative text-gray-800 dark:text-white min-h-screen flex items-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/bg-dark.png"
+          alt="Background"
+          fill
+          className="object-cover opacity-10 dark:opacity-20"
+        />
+      </div>
+      
+      {/* Content */}
+      <div className="container mx-auto px-5 py-24 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center">
+          {/* Content Column */}
+          <div className="lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col items-center lg:items-start text-center lg:text-left mb-16 lg:mb-0">
+            <h1 className="title-font text-4xl md:text-5xl mb-8 font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+              <HeroH1 />
+            </h1>
+            <p className="mb-8 leading-relaxed text-lg">
+              I&apos;m passionate about building innovative web applications and solving complex problems. With expertise in Full Stack Development, I create efficient, scalable, and user-friendly solutions.
+            </p>
+            <div className="flex justify-center lg:justify-start">
+              <Link href="/projects" className="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                View My Work
+              </Link>
+              <Link href="/contact" className="ml-4 inline-flex text-gray-800 bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded-full text-lg dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                Contact Me
+              </Link>
+            </div>
+            
+            {/* Social Media Icons */}
+            <div className="flex mt-8 space-x-6">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+                <FaGithub size={24} />
+              </a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+                <FaTwitter size={24} />
+              </a>
+              <a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+                <SiLeetcode size={24} />
+              </a>
+              <a href="https://discordapp.com/users/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+                <FaDiscord size={24} />
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-          <Image
-            className="rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="hero"
-            src="/heroImage1.webp"
-            width={300}
-            height={300}
-          />
+          
+          {/* Image Column */}
+          <div className="lg:w-1/2 mb-10 lg:mb-0">
+            <div className="relative w-64 h-64 lg:w-96 lg:h-96 mx-auto">
+              <Image
+                src="/devImage2.webp"
+                alt="About Me"
+                fill
+                className="rounded-full object-cover shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

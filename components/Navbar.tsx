@@ -15,14 +15,14 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-md">
+    <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-20">
       <nav className="container mx-auto p-4 flex justify-between items-center">
         <div className="text-lg font-bold text-gray-900 dark:text-white">
           <a href='#'>My Portfolio</a>
         </div>
         <ul className="flex space-x-4">
           <li>
-              <a href='#about' className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
+              <a href='/about' className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
                 About
               </a>
           </li>
@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
               </a>
           </li>
           <li>
-              <a href="#skills" className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
-                Skills
+              <a href="#blogs" className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
+                Blogs
               </a>
           </li>
           <li>

@@ -1,11 +1,13 @@
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
+import ProjectsSection from "@/components/projects-section";
+import SkillsSection from "@/components/skills-section";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
+      <SkillsSection />
+      <ProjectsSection />
     </>
   );
 }
