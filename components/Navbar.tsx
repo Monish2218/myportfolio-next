@@ -3,6 +3,25 @@
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from 'next-themes';
 
+const links = [
+  {
+    href: "/about",
+    label: "About",
+  },
+  {
+    href: "/projects",
+    label: "Projects",
+  },
+  {
+    href: "/blogs",
+    label: "Blogs",
+  },
+  {
+    href: "/contact",
+    label: "Contact",
+  }
+]
+
 const Navbar: React.FC = () => {
     const { setTheme, theme } = useTheme();
 
@@ -21,26 +40,15 @@ const Navbar: React.FC = () => {
           <a href='#'>My Portfolio</a>
         </div>
         <ul className="flex space-x-4">
-          <li>
-              <a href='/about' className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
-                About
-              </a>
-          </li>
-          <li>
-              <a href="#projects" className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
-                Projects
-              </a>
-          </li>
-          <li>
-              <a href="#blogs" className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
-                Blogs
-              </a>
-          </li>
-          <li>
-              <a href="#contact" className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
-                Contact
-              </a>
-          </li>
+          {links.map((link)=>{
+            return (
+              <li key={link.href}>
+                <a href={link.href} className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400">
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
         <button
           onClick={toggleTheme}
