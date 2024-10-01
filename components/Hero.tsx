@@ -6,7 +6,7 @@ import HeroH1 from './HeroH1'
 
 const Hero = () => {
   return (
-    <section className="relative text-gray-800 dark:text-white min-h-screen flex items-center">
+    <section id='about' className="relative text-gray-800 dark:text-white min-h-screen flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -29,29 +29,29 @@ const Hero = () => {
               I&apos;m passionate about building innovative web applications and solving complex problems. With expertise in Full Stack Development, I create efficient, scalable, and user-friendly solutions.
             </p>
             <div className="flex justify-center lg:justify-start">
-              <Link href="/projects" className="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <Link href="#projects" className="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 View My Work
               </Link>
-              <Link href="/contact" className="ml-4 inline-flex text-gray-800 bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded-full text-lg dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <Link href="#contact" className="ml-4 inline-flex text-gray-800 bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded-full text-lg dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 Contact Me
               </Link>
             </div>
             
             {/* Social Media Icons */}
             <div className="flex mt-8 space-x-6">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+              <a href="https://github.com/Monish2218" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
                 <FaGithub size={24} />
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+              <a href="https://linkedin.com/in/monish-agrawal" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
                 <FaLinkedin size={24} />
               </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+              <a href="https://twitter.com/Agrawalmonish1" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
                 <FaTwitter size={24} />
               </a>
-              <a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+              <a href="https://leetcode.com/luvoncode" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
                 <SiLeetcode size={24} />
               </a>
-              <a href="https://discordapp.com/users/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
+              <a href="https://discordapp.com/users/luvoncode" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
                 <FaDiscord size={24} />
               </a>
             </div>
