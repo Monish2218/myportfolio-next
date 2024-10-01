@@ -5,19 +5,19 @@ import { useTheme } from 'next-themes';
 
 const links = [
   {
-    href: "/about",
+    href: "#about",
     label: "About",
   },
   {
-    href: "/projects",
+    href: "#skills",
+    label: "Skills",
+  },
+  {
+    href: "#projects",
     label: "Projects",
   },
   {
-    href: "/blogs",
-    label: "Blogs",
-  },
-  {
-    href: "/contact",
+    href: "#contact",
     label: "Contact",
   }
 ]
