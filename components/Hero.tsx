@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaGithub, FaLinkedin, FaTwitter, FaDiscord } from 'react-icons/fa'
-import { SiLeetcode } from 'react-icons/si'
+import { FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa'
+import { SiLeetcode, SiX } from 'react-icons/si'
 import HeroH1 from './HeroH1'
 
 const Hero = () => {
@@ -46,7 +46,7 @@ const Hero = () => {
                 <FaLinkedin size={24} />
               </a>
               <a href="https://twitter.com/Agrawalmonish1" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
-                <FaTwitter size={24} />
+                <SiX size={24} />
               </a>
               <a href="https://leetcode.com/luvoncode" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300">
                 <SiLeetcode size={24} />
